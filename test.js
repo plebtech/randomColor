@@ -21,6 +21,7 @@ const bgColorChange = () => {
     document.body.style.backgroundColor = rgb();
 }
 
+// calls rgb() to return color code in rgb(r,g,b) format.
 const rgbChange = () => {
     const color = rgb();
     const hOne = document.createElement('h1');
@@ -31,6 +32,7 @@ const rgbChange = () => {
     document.body.prepend(hOne);
 }
 
+// calls hex() to return color code in hex format.
 const hexChange = () => {
     const color = hex();
     const hOne = document.createElement('h1');
