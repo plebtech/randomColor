@@ -14,6 +14,8 @@ function onLoad() {
         hexChange();
         rgbChange();
     }, 2000);
+    // call gradient changer.
+    gradientChange();
 }
 
 // calls randomColor.rbg() to generate a random color.
@@ -41,4 +43,13 @@ const hexChange = () => {
     hOne.style.margin = '1%';
     hOne.style.color = color;
     document.body.prepend(hOne);
+}
+
+// rotate the gradient every half second.
+const gradientChange = () => {
+    const grad = 0;
+    const gradientTimer = setInterval(() => {
+        (grad);
+        grad += 5;
+    }, 500);
 }
