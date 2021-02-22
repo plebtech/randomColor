@@ -19,12 +19,12 @@ function onLoad() {
 }
 
 // calls randomColor.rbg() to generate a random color.
-const bgColorChange = () => {
+function bgColorChange() {
     document.body.style.backgroundColor = rgb();
 }
 
 // calls rgb() to return color code in rgb(r,g,b) format.
-const rgbChange = () => {
+function rgbChange() {
     const color = rgb();
     const hOne = document.createElement('h1');
     const hOneText = document.createTextNode(color);
@@ -35,7 +35,7 @@ const rgbChange = () => {
 }
 
 // calls hex() to return color code in hex format.
-const hexChange = () => {
+function hexChange() {
     const color = hex();
     const hOne = document.createElement('h1');
     const hOneText = document.createTextNode(color);
@@ -46,8 +46,8 @@ const hexChange = () => {
 }
 
 // rotate the gradient every half second.
-const gradientChange = () => {
-    const grad = 0;
+function gradientChange() {
+    let grad = 0;
     const gradientTimer = setInterval(() => {
         (grad);
         grad += 5;
