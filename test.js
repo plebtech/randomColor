@@ -1,7 +1,12 @@
-document.addEventListener('DOMContentLoaded', onLoad());
+// DOMContentLoaded required with scripts loaded in <head> of html.
+// 'boot loader' of script.
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("loading..");
+    onLoad();
+});
 
 // script to run on load (called by DOMContentLoaded event above).
-function onLoad() {
+const onLoad = () => {
     // call bgColorChange every five seconds.
     document.body.style.display = 'flex';
     document.body.style.flexFlow = 'row wrap';
@@ -16,15 +21,16 @@ function onLoad() {
     }, 2000);
     // call gradient changer.
     gradientChange();
+    console.log("loaded.");
 }
 
 // calls randomColor.rbg() to generate a random color.
-function bgColorChange() {
+const bgColorChange  = () => {
     document.body.style.backgroundColor = rgb();
 }
 
 // calls rgb() to return color code in rgb(r,g,b) format.
-function rgbChange() {
+const rgbChange = () => {
     const color = rgb();
     const hOne = document.createElement('h1');
     const hOneText = document.createTextNode(color);
@@ -35,7 +41,7 @@ function rgbChange() {
 }
 
 // calls hex() to return color code in hex format.
-function hexChange() {
+const hexChange = () => {
     const color = hex();
     const hOne = document.createElement('h1');
     const hOneText = document.createTextNode(color);
@@ -46,7 +52,7 @@ function hexChange() {
 }
 
 // rotate the gradient every half second.
-function gradientChange() {
+const gradientChange = () => {
     let grad = 0;
     const gradientTimer = setInterval(() => {
         (grad);
